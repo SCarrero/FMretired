@@ -1,2 +1,2 @@
 # FMretired
-Older designs no longer in use
+Repo to hold old content and designs when they are removed from fmzurb2.
