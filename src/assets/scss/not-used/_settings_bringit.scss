@@ -1,0 +1,64 @@
+
+$global-font-size: 16px;
+$global-width: rem-calc(1500);
+
+$linen: #f4efde; // RGB: 245, 239, 223
+$sinbad: #86CECB;  // RGB: 134, 206, 203
+$cinnabar: #EC4F27; // RGB: 236, 77, 39
+$coal:  #344150;  // RGB: 52, 65, 80
+$periwinkle: #CFDDEC; 
+$light-gray: #A2AFBD;
+$medium-gray: #7C8C9F;
+$dts2-palette: (
+  linen: $linen,
+  periwinkle: $periwinkle,
+  sinbad: $sinbad,
+  cinnabar: $cinnabar,
+  coal:  $coal,
+  medium-gray: $medium-gray,
+  light-gray: $light-gray,
+  white: $white
+);
+$fm-green: $linen;
+$fm-red: $cinnabar;
+$body-background: $linen;
+$body-font-color: $coal;
+$header-font-family: 'Fjalla One', "Calibri Bold", "Arial Black", sans-serif;
+$body-font-family: 'Cantarell', Arial, Lucida Sans Unicode, sans-serif;
+$global-weight-bold: 700;
+$header-font-weight: normal;
+$global-weight-medium: normal;
+
+$breakpoints: (
+  small: 0,
+  medium: 660px,
+  large: 1024px,
+  xlarge: 1200px,
+  xxlarge: 1500px,
+);
+$print-breakpoint: large;
+$breakpoint-classes: (small medium large xlarge);
+
+$grid-column-gutter: (
+  small: 20px,
+);
+$gutter: 20px;
+$orbit-palette: $dts2-palette;
+
+$global-radius: 0;
+$input-placeholder-color: $coal;
+$input-font-family: inherit;
+$input-font-size: rem-calc(16);
+$input-color: $coal;
+$input-border: 0px solid $coal;
+$input-border-focus: 0px solid $coal;
+$input-shadow: none;
+$input-shadow-focus: none;
+$input-transition: none;
+$input-radius:0;
+$input-error-font-size: rem-calc(16);
+$reveal-background: transparent;
+$reveal-width: 100%;
+$reveal-padding: $global-padding * 2.5 0 $global-padding * 1.5;
+$reveal-border: 0px solid $medium-gray;
+$reveal-overlay-background: rgba($black, 0.75);

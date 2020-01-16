@@ -1,0 +1,8 @@
+
+  javascriptbringit:
+    # Paths to your own project code are here  
+    - "src/assets/js/fmGlobals.js"
+    - "src/assets/js/prepRotators.js"
+    - "src/assets/js/prepBringItModals.js"  
+    - "src/assets/js/appBringIt.js"
+    - "src/assets/js/bringItActions.js"

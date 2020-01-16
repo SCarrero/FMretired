@@ -1,0 +1,101 @@
+$number-profiles: 10;
+$profilethumbwidth: 100;
+$profilethumbheight: 138;
+$thumbgutter: 10;
+
+.leader-panel {
+  display: block;
+  -webkit-animation: fadeIn .9s;
+          animation: fadeIn .9s;
+  opacity: 1; 
+}
+.leader-panel:not(.is-active) {
+  opacity: 0;
+  display: none;  
+}
+.leader-panel-wrapper {
+  overflow: hidden;
+  position: relative;
+  min-height: rem-calc($profilethumbheight + 2);
+  margin: 0 auto;
+  max-width: rem-calc($profilethumbwidth * $number-profiles - $gutter);
+  line-height: 1;
+}
+.leader-panel-nav {
+  width: rem-calc($profilethumbwidth * $number-profiles);
+  min-height: rem-calc($profilethumbheight);
+  float: left;
+}
+.leader-panel-item {
+  padding: rem-calc(0 $thumbgutter);
+  float: left;
+  border-width: 0;
+  width: rem-calc($profilethumbwidth);
+  line-height: 1.1;
+  min-height: rem-calc($profilethumbheight);
+  color: inherit;
+  &:nth-child(1){
+    padding-left: 0;
+    width: rem-calc($profilethumbwidth - $thumbgutter);
+  }
+  &:nth-child(1n + #{$number-profiles + 1}){
+    display: none;
+  }
+}
+
+.leader-panel-item:hover,
+.leader-panel-item:focus,
+.leader-panel-item[aria-selected='true'] {
+  background: transparent;
+}
+.leader-panel-item.is-active img,
+.leader-panel-item:hover img,
+.leader-panel-item:focus img {
+  opacity: 0.3;
+}
+
+.leader-panel-item p {
+  margin: 0.5rem 0 0;
+}
+
+.leader-panel-nav-help {
+  display: block;
+  margin: 0.5rem 0 0;
+  position: relative;
+  bottom: -0.5rem;
+}
+
+/* custom for leader-panel-band overflow */
+@media screen and (max-width: rem-calc($number-profiles * $profilethumbwidth + 56 - 1)) {
+  .landing-band-sides-only.overflow-right {
+    padding-right: 0;
+  } 
+}
+@media screen and (min-width: rem-calc($number-profiles * $profilethumbwidth + 56))  and (max-width: rem-calc($number-profiles * $profilethumbwidth + 30 + 26 + 40)) {
+  .landing-band-sides-only.overflow-right {
+      padding-left: rem-calc(30);
+      padding-right: rem-calc(26);
+  } 
+}
+@media screen and (max-width: rem-calc($number-profiles * $profilethumbwidth + 56 - 1)) {
+  .landing-band-sides-only.overflow-right {    
+    padding-top: rem-calc(18);
+  }  
+  .leader-panel-wrapper {
+    overflow-x: auto;
+  }
+  .landing-band-sides-only.overflow-right::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: rem-calc(54);
+    background: linear-gradient(to right, rgba(16,68,119,0) 0%, $sapphire 100%); 
+  }
+}
+@media screen and (min-width: rem-calc($number-profiles * $profilethumbwidth + 48)) {
+  .leader-panel-nav-help {
+    display: none;
+  }
+}

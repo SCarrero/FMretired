@@ -1,0 +1,199 @@
+// default to use for all heros with background images
+.landing-hero {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center; 
+  background-position: center top;
+}
+
+.ltw-hero {
+  padding: 3rem 0 0;
+  background-image: url("/leadingtheway/images/hero_leadingtheway.jpg");
+  padding: 3rem 0 2rem;
+  min-height: 22rem; 
+    @include breakpoint(small){
+    background-position:70% 50%; 
+    }
+    @include breakpoint(large){
+      background-position: center top;
+    }  
+ }
+  
+
+
+.overlay-sapphire-lead {
+  @include breakpoint(medium){
+    background: linear-gradient(to right, rgba($sapphire,0.64) 0%,rgba($sapphire,0.64) 70%,rgba(0,0,0,0) 70.1%,rgba(0,0,0,0) 100%);      
+  }
+  @include breakpoint(large) {
+    background: linear-gradient(to right, rgba($sapphire,0.64) 0%,rgba($sapphire,0.64) 61%,rgba(0,0,0,0) 61.1%,rgba(0,0,0,0) 100%);    
+  }
+  @include breakpoint(xlarge){
+    background: linear-gradient(to right, rgba($sapphire,0.64) 0%,rgba($sapphire,0.64) 52%,rgba(0,0,0,0) 52.1%,rgba(0,0,0,0) 100%);  
+  }
+}
+
+
+.landing-hero.sfdts-home {
+  background-image: url("/singlefamily/duty-to-serve/images/hero_home.jpg");
+  background-position: 75% 38%;
+  @include breakpoint(medium){
+    background-position: 60% 38%;
+  }
+  @include breakpoint(xlarge){
+    background-position: 50% 50%;
+  }
+}
+.landing-hero.sfdts-blog {
+  background-image: url("/singlefamily/duty-to-serve/images/hero_home.jpg");
+  background-position: 45% 76%;
+  @include breakpoint(medium){
+    background-position: 10% 43%;
+  }
+  @include breakpoint(large){
+    background-position: 10% 40%;
+  }
+  @include breakpoint(xlarge){
+    background-position: 50% 35%;
+  }
+}
+.landing-hero.sfdts-blog {
+  background-image: url("/singlefamily/duty-to-serve/images/hero_home.jpg");
+  background-position: center bottom;
+  @include breakpoint(medium){
+    background-position: 10% 30%;
+  }
+  @include breakpoint(xlarge){
+    background-position: 50% 25%;
+  }
+}
+.landing-hero.sfdts-choicehome{
+  background-image: url("/singlefamily/duty-to-serve/images/hero_choicehome2.jpg");
+  //background-position: 45% 38%;
+    background-position: center bottom;
+    h2.choice-Hero-Copy{
+      font-size: 1rem;
+      margin-bottom:4.75rem;
+    } 
+    
+  @include breakpoint(medium){
+    background-position: 50% 100%;
+    h2.choice-Hero-Copy{
+      font-size: 1.2rem;
+      margin-bottom:7.45rem;
+    }    
+  }
+  @include breakpoint(large){
+    h1.choice-Hero-Copy{
+      margin-top:1.75rem;
+    }
+    h2.choice-Hero-Copy{
+      background-position:50% 100%;
+      margin-bottom:12.25rem;
+      font-size: 1.35rem;
+    }
+  }
+  @include breakpoint(xlarge){
+    background-position: 50% 100%;
+    h1.choice-Hero-Copy{
+      margin-top:1.75rem;
+    }
+    h2.choice-Hero-Copy{
+      margin-bottom:17.75rem;
+    }
+  }
+  @include breakpoint(xxlarge){
+    background-position: 50% bottom;
+    h1.choice-Hero-Copy{
+      margin-top:4.75rem;
+    }
+    h2.choice-Hero-Copy{
+      margin-bottom:25.25rem;
+    }
+  }
+}
+.landing-hero.home-possible{
+   background-image: url("/singlefamily/mortgages/homepossible/img/HP_50Billion_hero.jpg");
+  background-position: 45% 38%;
+  @include breakpoint(medium){
+    background-position: 10% 30%;
+  }
+  @include breakpoint(xlarge){
+    background-position: 50% 25%;
+  }
+}
+.landing-hero.sfdts-mh {
+  background-image: url("/singlefamily/duty-to-serve/images/hero_manufactured.jpg");
+  background-position: center bottom;
+  @include breakpoint(xlarge){
+    background-position: left 90%;
+  }
+  @include breakpoint(xxlarge){
+    background-position: left 83%;
+  }
+}
+
+.landing-hero.sfdts-rh {
+  background-image: url("/singlefamily/duty-to-serve/images/hero_rural.jpg");
+  @include breakpoint(medium){
+    background-position: center 90%;
+  }
+  @include breakpoint(large){
+    background-position: center 75%;
+  }
+  @include breakpoint(xlarge){
+    background-position: center 65%;
+  }
+}
+
+.landing-hero.sfdts-ah {
+  background-image: url("/singlefamily/duty-to-serve/images/hero_affordable.jpg");
+  background-position: center bottom;
+  @include breakpoint(medium){
+    background-position: center;
+  }
+  @include breakpoint(xlarge){
+    background-position: center 38%;
+  }
+}
+.sfdts-events {
+  text-align: center; 
+  .position-relative {  
+    min-height: 240px; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include breakpoint(large){
+      min-height: 300px; 
+    }
+  }
+  .block.background-sheer {
+    background: none;
+    position: relative; 
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      background: rgba($black, 0);  
+      z-index: 200; 
+      transition: background 0.25s ease-out;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+    opacity: 1;
+      &::before {
+        background: rgba($black, 0.3);  
+        transition: background 0.25s ease-out;             
+      }
+      .full {
+        z-index: 220; 
+      }
+    }
+  }
+}

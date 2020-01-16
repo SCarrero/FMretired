@@ -1,0 +1,205 @@
+//
+// Background Sections
+//
+.background-sapphire { 
+  background-color: $sapphire; 
+  color: $white;
+  hr {  
+    border-color: $white; 
+    opacity: 0.4;
+  }
+  .background-white hr {
+    border-color: $sapphire;
+  }
+}
+.background-sapphire-dim{background-color:rgba(16,68,119,.8)}
+
+.background-foam { 
+  background-color: $foam; 
+}
+.diagonal-band {
+  background-image: linear-gradient(65deg, rgba($white,0.12) 0%, rgba($white,0.12) 40%, rgba($white, 0) 40.01%);
+}
+.spot-sapphire::before {
+  content: "";
+  @include absolute-center;
+  display: block;
+  background: $sapphire;
+  border-radius: 999em;
+  width: 4.92em;
+  height: 4.92em;
+}
+.map-hover {
+  img {
+    transform: scale(1);
+    transition: all 0.3s ease;
+  }
+  &:hover,
+  &:focus {
+    img {
+      transform: scale(1.01);
+      transition: all 0.3s ease;
+    }
+  }
+}
+.background-quote::after {
+  content: "\201D";
+  font-size: rem-calc(128);
+  font-size: calc(128px + 224 * (100vw)/1180);
+  opacity: .2;
+  display: block;
+  text-align: right;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 0.8em;
+  font-family: Lucida Sans, Lucida Sans Typewriter, Lucida Console, monospace;
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(400);
+  }
+}
+
+//
+// Container Styles
+//
+.border-white {
+  border-color: white !important;
+}
+.border-3 {
+  border-width: 3px !important;
+}
+.shadow-southeast {
+  box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2);
+}
+.manufactured-facts,  
+.affordable-facts, 
+.rural-facts {
+  .media-object {
+    min-height: rem-calc(180);
+  }
+  .know-icon {
+    width: 276px;
+    height:96px;
+    @include breakpoint(medium only) {
+      width: 207px;
+      height:72px;
+    }
+  }
+}
+.circle {
+  border-radius: 999em;
+}
+//
+// Orbit Prev/Next 
+//
+.orbit-controls-outside .orbit-previous, 
+.orbit-controls-outside .orbit-next {
+  @include breakpoint(xxlarge) {
+    font-size: 4.5em;
+  }
+}
+
+//
+// Text Styles 
+//
+.accent-sapphire { 
+  color: $sapphire;
+}
+.accent-iceblue {
+  color: $iceblue;
+}
+.accent-transparency25 {
+  opacity: 0.75;
+}
+.accent-primary {
+  color: $primary-color;
+}
+.accent-white:hover,
+.accent-white:focus,
+.accent-white:active {
+  color: $white;
+}
+
+.congrats-yellow {
+  text-shadow: 0 0 7px 0 rgba(255,201,0,0.3);
+  letter-spacing: -1.5px;
+  color:  $fm-yellow;
+  font-weight: 500;
+  background: -webkit-linear-gradient($fm-yellow, #EC8B00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+//
+// Icons
+//
+.checkbox-list li {
+  position: relative;
+  list-style: none;
+  margin-left: 2rem;
+  &::before {
+    content: " ";
+    display: block;
+    width: 18px;
+    height: 18px;
+    left: -2rem;
+    position: absolute;
+    top: 0;
+    background: transparent url("/singlefamily/duty-to-serve/images/checkbox.svg") no-repeat center center;
+  } 
+}
+svg.fill-sapphire {
+  fill: $sapphire;
+}
+//
+// Template Component Overwrites
+//
+.footer {
+  background-color: darken($primary-color, 3%);
+}
+.subnav-edge {
+  height: rem-calc(10);
+  @include mosaic-fill($celery, $mosaic-last); 
+}
+.footer-bottom-edge {
+  height: rem-calc(10);
+  @include mosaic-fill($celery, $mosaic-last); 
+  @include breakpoint (medium){
+    height: rem-calc(16);
+  }
+  @include breakpoint (large){
+    height: rem-calc(20);
+  }
+}
+.has-tip {
+  border: none;
+}
+///DTS Choice Home 3/13/2019 MS
+
+p.ch-notice{
+  font-size:1.375rem;
+}
+.ch-notice-container{
+  margin-top:2.5rem;
+  margin-bottom:4%;
+  @include breakpoint(large){
+    position: relative;
+    top:0;
+    left: 0;
+  }
+}
+.ch-notice-img{
+  @include breakpoint(xlarge){
+    position:absolute;
+    top:-60%;
+    right:3%;
+  }
+}
+
+
+// preventing pixel image inserted by GTM from adding a gap below the page
+body > img {   
+  position: absolute;
+  bottom: 0;
+  z-index:0;
+}

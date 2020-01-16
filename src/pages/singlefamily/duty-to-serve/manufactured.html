@@ -1,0 +1,228 @@
+---
+title: Manufactured Housing
+subtitle: A viable source of affordable, sustainable homeownership.
+layout: landing-sf
+description: "Every Single Family deserves an affordable home"
+image: ""
+keywords:
+url:  http://www.freddiemac.com/singlefamily/duty-to-serve/manufactured.html
+bodyclass: 
+stylesheet: [/ss/app_landing.css, /ss/app_sf-landing.css]
+share: false
+footer: 
+---
+
+{{> sf-duty-header}}
+<script>
+  document.getElementById("section-manufactured").classList.add('active');          
+</script>
+
+<!--HERO IMAGE-->
+<div class="notch-wrapper">
+  <div class="landing-band landing-hero background-primary sfdts-mh">    
+    <div class="row-container text-center medium-text-left">
+      <div class="row gutter-bottom">
+        <div class="column">
+          <p class="text-flex-15-18 uppercase weight-bold accent-transparency25 no-margin">Freddie Mac Single-Family Duty to Serve</p>
+          <h1 class="text-flex-30-48 weight-black">{{title}}</h1>
+          <h2 class="weight-light gutter-bottom text-flex-21-28 accent-transparency25"><em>{{subtitle}}</em></h2>
+          <br class="reduce">
+        </div>  
+      </div>      
+    </div>   
+  </div>
+  <div class="notch-top-v background-white"></div>
+  <div class="notch-top-v background-foam"></div>
+</div>
+<!--END HERO IMAGE-->
+
+<div class="background-foam landing-inner-band">   
+  <div class="row-container">
+    <div class="row">
+      <div class="column">
+        <div class="media-object stack-for-small gutter-bottom text-center medium-text-left">
+          <div class="media-object-section">  
+              <img class="no-border" style="width: 135px;" src="/singlefamily/duty-to-serve/images/dts_identifier_navy.png" alt="Duty to Serve Icon" />
+          </div>
+          <div class="media-object-section align-self-middle">
+            <p class="text-flex-21-28">With more than 22 million families homeowners because of <span class="accent-primary" data-tooltip aria-haspopup="true" class="has-tip" tabindex="0" title="A manufactured home is built in a factory according to the Manufactured Home Construction and Safety Standards of June 1976 (the HUD Code--24 C.F.R. Part 3280) and secured on a permanent, nonremovable steel frame or chassis. The dwelling can be built as one complete section, or in multiple sections, that are transported, assembled and installed at the home site.">manufactured housing</span>, it just might be the critical source of affordable housing the industry needs. We’re providing innovative and flexible financing solutions to support this market.</p>
+          </div>
+        </div>
+        <div class="gutter-bottom"></div>
+        <br class="reduce show-for-xlarge"> 
+        <div data-equalizer="outer">
+          <div class="row large-up-2 text-left gutter-bottom" data-equalizer="inner">
+            <div class="column">
+              <div class="callout background-white" data-equalizer-watch="outer">
+                <div class="row">
+                  <div class="column medium-6">
+                    <a class="block" data-open="mhModal1" aria-controls="mhModal1">
+                    <div class="callout small no-margin background-primary horizontal-gradient-dark-left top-v-overlay" data-equalizer-watch="inner">
+                      <h3 style="margin: 0.25em 0 0.5em;">Real Property Manufactured Housing</h3>
+                    </div>
+                    </a>
+                  </div>
+                  <div class="column medium-6">
+                    <div class="gutter-right gutter-top-small-only" style="padding-left: 0.625rem;" data-equalizer-watch="inner">
+                      <p class="flex-up weight-normal">We currently support financing for real property manufactured homes, but we want to do more. </p>
+                      <p class="gutter-bottom-large uppercase weight-bold"><a class="icon-chevron-right" data-open="mhModal1" aria-controls="mhModal1">More</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {{> manufactured-modal-real-property}}
+            </div>
+            <div class="column">
+              <div class="callout background-white" data-equalizer-watch="outer">
+                <div class="row">
+                  <div class="column medium-6">
+                    <a class="block" data-open="mhModal2" aria-controls="mhModal2">
+                    <div class="callout small no-margin background-primary horizontal-gradient-dark-left top-v-overlay" data-equalizer-watch="inner">
+                      <h3 style="margin: 0.25em 0 0.5em;">Personal Property Manufactured Housing (Chattel)</h3>
+                    </div>
+                    </a>
+                  </div>
+                  <div class="column medium-6">
+                    <div class="gutter-right gutter-top-small-only" style="padding-left: 0.625rem;"  data-equalizer-watch="inner">
+                      <p class="flex-up weight-normal">We’re currently exploring opportunities to purchase personal property or chattel loans.</p>
+                      <p class="gutter-bottom-large uppercase weight-bold"><a class="icon-chevron-right" data-open="mhModal2" aria-controls="mhModal2">More</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {{> manufactured-modal-personal-property}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gutter-bottom gutter-top-large"></div>
+    </div>    
+  </div>
+</div>
+
+
+<div class="background-primary landing-band vertical-gradient-dark-top">   
+  <div class="row-container text-center medium-text-left"> 
+    <div class="row gutter-bottom gutter-top">
+      <div class="column">
+        <br class="reduce show-for-xlarge"> 
+        {{> manufactured-videofeature }}
+      </div>
+    </div>     
+  </div>
+</div>
+
+
+
+<div class="background-sapphire landing-band-sides-only notch-wrapper horizontal-gradient-dark-right">  
+  <div class="mid-diamond-shape">
+  </div> 
+  <div class="row-container-narrow text-center medium-text-left">
+    <div class="row gutter-top gutter-bottom">
+      <div class="column">
+        <div class="gutter-top">
+          {{> manufactured-didyouknow }}
+        </div> 
+      </div>
+    </div>    
+  </div>
+</div>
+
+
+<div class="background-foam landing-band">   
+  <div class="row-container text-center">
+    <div class="row gutter-bottom gutter-top">
+      <div class="column">
+        <br class="reduce show-for-xlarge">
+        <h2 class="text-flex-26-42 accent-sapphire">What's New</h2>
+        <div class="small-to-default"></div>
+        {{> manufactured-whatsnew }}
+      </div>
+    </div>    
+  </div>
+</div>
+
+
+<div class="background-primary landing-band diagonal-band">   
+  <div class="row-container text-center medium-text-left"> 
+    <div class="row gutter-top gutter-bottom">
+      <div class="column">
+        <br class="reduce show-for-xlarge">
+        {{> manufactured-quotes}}
+      </div>
+    </div>     
+  </div>
+ </div>
+
+<div class="background-foam landing-band">   
+  <div class="row-container text-center medium-text-left"> 
+    <div class="row gutter-bottom gutter-top">
+      <div class="column">
+        <br class="reduce show-for-xlarge">
+        {{> manufactured-infographic}}   
+      </div>
+    </div>    
+  </div>
+</div>
+
+<div class="background-primary landing-band vertical-gradient-dark-top">
+  <div class="row-container">
+    <div class="row gutter-bottom-large large-up-3 text-flex-16-20">
+      <div class="column gutter-bottom">
+        <h3 class="text-flex-18-24 uppercase no-margin"><span style="opacity: .6;">Resources</span></h3>
+        <hr />
+        <div class="gutter-right">
+          <div class="gutter-right-medium-only gutter-right-xlarge">
+            <p><a class="block" data-open="mhFAQModal" aria-controls="mhFAQModal"><strong>FAQs</strong> – Frequently Asked Questions about Masnufactured Housing</a></p>
+            <p><a class="block" href="/about/duty-to-serve/docs/Freddie-Mac-Underserved-Markets-Plan.pdf"><strong>DTS plan</strong></a></p>
+            <p><a class="block" href="/singlefamily/duty-to-serve/DTS-Fact-Sheet.pdf"><strong>Freddie Mac Duty to Serve Fact Sheet</strong></a></p>
+            <p><a class="block" href="/singlefamily/expmkts/mhle.html"><strong>MH fact sheet/mortgage requirements</strong></a></p>
+            <br class="hide-for-large">
+          </div>
+        </div>
+        <div class="reveal background-sapphire" id="mhFAQModal" data-reveal>
+          <div class="modal-content row-container">
+            <div class="row">
+              <div class="column xlarge-offset-1 xlarge-10 end">
+                <div class="modal-header">
+                  <h2>Single-Family Duty to Serve</h2>
+                </div>
+                <div class="modal-page-header">
+                  <h1>Manufactured Housing FAQs</h1>
+                </div>
+                <div class="callout large background-white">
+                  <div class="callout small-to-large">
+                     {{> manufactured-faqs }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column gutter-bottom">
+        <h3 class="text-flex-18-24 uppercase no-margin"><span style="opacity: .6;">From Our Leaders</span></h3>
+        <hr />
+        <div class="gutter-right">
+          <div class="gutter-right-medium-only gutter-right-xlarge">
+            <p><a class="block" href="/perspectives/danny_gardner/20160919_saving_resources.html"><strong>Saving Your Resources and the Earth's</strong> &ndash; Danny Gardner</a></p>
+            <p><a class="block" href="/perspectives/david_leopold/20161003_rental_green_advantage.html"><strong>Rental Housing Needs a Green Advantage</strong> &ndash; David Leopold</a></p>
+            <br class="hide-for-large">
+          </div>
+        </div>
+      </div>
+      <div class="column gutter-bottom">
+        <h3 class="text-flex-18-24 uppercase no-margin"><span style="opacity: .6;">Freddie Mac Learning</span></h3>
+        <hr />
+        <div class="gutter-right">
+          <div class="gutter-right-medium-only gutter-right-xlarge">
+            <p><a rel="external" class="block" href="https://learn.freddiemaclearning.com/Saba/Web_spf/NA3P1PRD0123/guest/ledetail/cours000000000003226"><strong>Mortgages Secured by Manufactured Homes</strong></a></p>
+            <p><a class="block" data-open="eventsModalMH" aria-controls="eventsModalMH"><strong>Industry Insights &amp; Conference</strong></a></p>
+          </div>
+        </div>
+         {{> manufactured-modal-events}}
+      </div>
+    </div>
+  </div>
+</div>
+{{> footer-landing-duty}}

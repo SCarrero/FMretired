@@ -1,0 +1,93 @@
+@each $name, $color in $dts2-palette {    
+  .background-#{$name} {  
+    background-color: $color;
+  }
+} 
+.hero-section {
+  padding-bottom: 6.25rem;
+  @include breakpoint(medium){
+    padding-bottom: 0rem;
+  }
+  @include breakpoint(large){
+    padding-bottom: 7rem;
+  }
+}
+
+.background-linen .row,
+.logo-footer {
+  position: relative;
+  z-index: 50;
+}
+.page-band-offset { 
+  padding-top: rem-calc(30);
+  @include breakpoint(large){
+    padding-top: rem-calc(65);
+  }
+}
+
+.side-extend {
+  position: relative;
+  padding-left: rem-calc(15);
+  padding-right: rem-calc(15);
+  @include breakpoint(medium) {
+    padding-left: rem-calc(20);
+    padding-right: rem-calc(20); 
+  }
+  @include breakpoint(xxlarge) {
+    padding-left: rem-calc(0);
+    padding-right: rem-calc(0); 
+  }
+}
+
+.house-break-wrapper {
+  min-height: rem-calc(250);
+  margin: 0 auto;
+  position: relative;
+  @include breakpoint(medium) {   
+    height: rem-calc(434);
+    width: rem-calc(434);
+  }
+  @include breakpoint(large) {  
+    height: auto;
+    width: 100%;
+  }
+}
+
+.house-build-wrapper {
+  min-height: rem-calc(190);
+  position: relative;
+  z-index: 30;
+  margin: 3rem auto 2.5rem;
+  @include breakpoint(medium) {
+    height: rem-calc(400);
+    width: rem-calc(660);
+  }
+  @include breakpoint(large) {
+    height: rem-calc(435);
+    width: rem-calc(731);
+    margin-bottom: 4rem;
+  }
+}
+
+.grunge-blue {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: transparent url("/bring-it-home/images/grunge-blue.png") no-repeat top left / 1557px 1440px;   
+    z-index: 20;
+  }
+}
+.page-band,
+.page-band-offset { 
+  padding-top: rem-calc(65);
+  padding-bottom: rem-calc(65);
+  @include breakpoint(large){
+    padding-top: rem-calc(130);
+    padding-bottom: rem-calc(130);
+  }
+}

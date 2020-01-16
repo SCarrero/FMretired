@@ -1,0 +1,297 @@
+.fm-logo {
+  margin-top: rem-calc(14);
+  z-index: 100;
+  position: relative;
+}
+.video-modal {
+  position: relative;
+  display: inline-block;  
+}
+.hero-1 {
+  min-height: rem-calc(445);
+  @include breakpoint(medium){
+    margin-top: 3rem;
+    min-height: rem-calc(500);
+  }  
+  @include breakpoint(large){
+   min-height: rem-calc(450);
+   margin-top: 5rem;
+  }
+  @include breakpoint(xlarge){
+   margin-top: 6rem;
+   min-height: rem-calc(430);
+  }
+  @include breakpoint(xxlarge){
+   margin-top: 7rem;
+  }
+}
+
+.cta-dts {
+	height: rem-calc(65);
+	width: rem-calc(210); 
+  position: relative;
+  margin: 0 auto; 
+  font-size: rem-calc(20);  
+  background-color: $cinnabar;
+  > a {
+    padding: rem-calc(20 32 20 38);
+    font-family: $header-font-family;
+    display: inline-block;
+    position: relative;
+    @include disable-mouse-outline;
+    transition: letter-spacing 0.3s ease; 
+    svg {
+      vertical-align: middle;
+      fill: #9E422A;
+      transition: fill 0.3s ease;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      letter-spacing: 0.03em;
+      color: $white;
+      svg {
+        fill: $white;
+      }
+    }
+  }
+}
+.cta-video {
+  display: inline-block;
+  margin-right: rem-calc(30);
+  @include disable-mouse-outline;
+  .media-object {
+    position: relative; 
+    z-index: 301;
+  }
+  h5 {  
+    color: $medium-gray;
+    transition: color 0.3s ease, letter-spacing 0.3s ease;    
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    h5 {
+      color: $linen;
+      letter-spacing: 0.1em;
+    }
+  }
+  .cta-video-button {
+    display: inline-block;
+    border-radius: 999em;
+    position: relative;
+    max-width: rem-calc(59);
+    z-index: 200; 
+    @include breakpoint(medium){
+      margin-right: rem-calc(10);
+    }
+    &::before {
+      content: "";
+      background: $white;
+      border-radius: 999em;
+      @include absolute-center;
+      width: 0;
+      height:0;   
+      transition: width 0.3s ease, height 0.3s ease;    
+    }    
+    img {    
+      position: relative;
+      z-index: 210;
+      width: rem-calc(59);
+      height: rem-calc(59);
+    }
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    .cta-video-button::before {
+      width: 97%;
+      height:97%;      
+    }
+  }
+}
+.bring-it-home-mark {
+  position: relative;
+  width: rem-calc(274.4);
+  height: rem-calc(204);
+  margin: 0 auto;
+	// transform: rotate(2deg);
+  @media screen and (min-width: -zf-bp-to-em(map-get($breakpoints, medium))) and (max-width: -zf-bp-to-em(map-get($breakpoints, medium) + 160px)) {
+    height: rem-calc(157.17);
+    width: rem-calc(228);
+  }  
+  @include breakpoint(medium){
+    margin: 0;
+  }
+  @include breakpoint(large){
+    width: rem-calc(343);
+    height: rem-calc(255);
+  }
+  svg {
+    position: absolute;
+    top: 0;
+    right:0;
+    left:0;
+    bottom:0;
+  }
+}
+
+.gradient-pagebreak {
+  position:relative;
+  @include breakpoint(medium){
+    &::after {
+      content: "";
+      height: 70px;	
+      width: 100%;	
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(180deg, rgba(236,230,213,0.91) 0%, rgba(236,230,213,0) 100%);
+    }
+    @include breakpoint(large){
+      &::after {
+        height: 150px;	
+      }
+    }
+  }
+}
+.gradient-pagebreak-mobile {
+  position:relative;
+  @include breakpoint(small only){
+    &::after {
+     content: "";
+     height: 70px;	
+     width: 100%;	
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     background: linear-gradient(360deg, rgba(236,230,213,0.91) 0%, rgba(236,230,213,0) 100%);
+    }
+  }
+}
+.align-middle {
+  align-items: center;
+}
+
+
+.background-linen-tilt {
+  position: relative;
+  width: 100%;
+  height: 0;
+  &::after {
+    position: absolute;
+    content: "";
+    left:-15%;
+    top: 0;
+    min-height: 9rem;
+    margin-top: -7rem;
+    transform:rotate(-5.8deg);
+    transform-origin: 50% 50%;
+    width:130%;
+    background: $linen;
+    z-index: 21;
+    @include breakpoint(medium){      
+      min-height: 12rem;
+    }
+    @include breakpoint(large){      
+      min-height: 16rem;
+      margin-top: -7rem;
+    }
+    
+  }
+}
+.parallelogram {
+  transform: skew(-9deg);
+  transform-origin: bottom left;  
+  input {
+    padding-left: rem-calc(12);
+  }
+  .unskew {
+    transform: skew(9deg);
+    background: transparent;
+    height: rem-calc(66);
+    @include breakpoint(medium only) {
+      height: rem-calc(56);
+    }
+    text-align: left;
+    margin: 0;
+    @include breakpoint(xlarge){
+      height: rem-calc(76);    
+    }
+    &.button:hover,
+    &.button:focus,
+    &.button:active {
+      letter-spacing: 0.03em;
+      svg {
+        fill: $white;
+      }
+    }
+  }
+}
+
+.cta-email {
+  padding: rem-calc(14 0 12 20); 
+  width: rem-calc(120);
+  @include breakpoint(medium){   
+    width: rem-calc(110);  
+  }
+  @include breakpoint(xlarge){   
+    width: rem-calc(167);  
+    padding: rem-calc(14 0 12 38);
+  }
+  font-family: $header-font-family;
+  display: inline-block;
+  position: relative;
+  z-index: 520;
+  transition: letter-spacing 0.3s ease; 
+  svg {
+    vertical-align: middle;
+    fill: #63A9A6;
+    transition: fill 0.3s ease;
+  }
+}
+
+.reveal-overlay {
+  padding: 2rem; 
+  overflow: visible;
+}
+.reveal.overlay-video { 
+  overflow: visible;
+  outline-color: transparent;
+
+}
+.responsive-embed {
+  top: 0;
+  bottom: 0;  
+  left: 0;
+  right: 0;
+  overflow: visible;
+}
+.close-button {  
+  overflow: visible;
+  background-color: $cinnabar;
+  border-radius: 999em;
+  font-size: rem-calc(16); 
+  height: 1.5em;
+  width: 1.5em;    
+  line-height: 1;
+  @include breakpoint(large){
+    font-size: rem-calc(20); 
+  }
+  @include breakpoint(xlarge){
+    font-size: rem-calc(26);
+  }
+  svg {     
+    @include absolute-center;
+    width: 0.75em;
+    height: 0.75em;
+  }
+  .reveal-overlay & {
+    line-height: 0.95; 
+    transform: translate(1.9em, -1.9em);
+  }
+}  
+html.is-reveal-open,
+html.is-reveal-open body {
+  width: 100%;
+}
