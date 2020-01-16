@@ -1,0 +1,63 @@
+// new animation for transform 2019 //
+
+// Odometer concept redone to use text instead of images //
+.number-channel {
+  height: 1.2em;
+  overflow: hidden;
+  line-height: 1em;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  $transition-delay: 1;
+  > div {
+    transform: translateY(1em);
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}).animate {
+        transition-delay: ($transition-delay - $i/12) + s;
+      }
+    } 
+    &.animate {
+      transform: translateY(-1.2em * 10);
+      transition-property: transform;
+      transition-timing-function: linear;
+      transition-duration: 1.25s;
+    }    
+  }  
+} 
+.stack {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1; 
+    padding: 0;
+    margin: 0;
+  > div {
+    height: 1.1em;
+    margin: 0.1em 0.05em 0;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ styles */
+  .ie-hide {
+    display:none;
+  }
+}
+@supports not (-ms-high-contrast: none) {
+   /* Non-IE styles here */
+   .ie-show {
+      display:none;
+   }
+}
+@supports (-webkit-overflow-scrolling: touch) {
+  /* CSS specific to iOS devices */
+  .ios-hide {
+    display:none;
+  } 
+}
+
+@supports not (-webkit-overflow-scrolling: touch) {
+  /* CSS for other than iOS devices */
+  .ios-show {
+      display:none;
+   }
+}

@@ -1,0 +1,268 @@
+---
+title: Rural Housing
+subtitle: Putting qualified borrowers in rural markets on the path to homeownership.
+layout: landing-sf
+description: "Every Single Family deserves an affordable home"
+image: ""
+keywords:
+url:  http://www.freddiemac.com/singlefamily/duty-to-serve/rural.html
+bodyclass: 
+stylesheet: [/ss/app_landing.css, /ss/app_sf-landing.css]
+share: false
+footer: 
+---
+
+{{> sf-duty-header}}
+<script>
+  document.getElementById("section-rural").classList.add('active');          
+</script> 
+
+<!--HERO IMAGE-->
+<div class="notch-wrapper">
+  <div class="landing-band landing-hero background-primary sfdts-rh">    
+    <div class="row-container text-center medium-text-left">
+      <div class="row gutter-bottom">
+        <div class="column">
+          <p class="text-flex-15-18 uppercase weight-bold accent-transparency25 no-margin">Freddie Mac Single-Family Duty to Serve</p>
+          <h1 class="text-flex-30-48 weight-black">{{title}}</h1>
+          <h2 class="weight-light gutter-bottom text-flex-21-28 accent-transparency25"><em>{{subtitle}}</em></h2>
+          <br class="reduce">
+        </div>  
+      </div>      
+    </div>   
+  </div>
+  <div class="notch-top-v background-white"></div>
+  <div class="notch-top-v background-foam"></div>
+</div>
+<!--END HERO IMAGE-->
+
+
+<div class="background-foam landing-inner-band">   
+  <div class="row-container">
+    <div class="row">
+      <div class="column">
+        <div class="media-object stack-for-small gutter-bottom text-center medium-text-left">
+          <div class="media-object-section">  
+              <img class="no-border" style="width: 135px;" src="/singlefamily/duty-to-serve/images/dts_identifier_navy.png" alt="Duty to Serve Icon" />
+          </div>
+          <div class="media-object-section align-self-middle">
+            <p class="text-flex-21-28">We're finding innovative ways to leverage research and expand financing to increase access to affordable housing in <span class="accent-primary" data-tooltip aria-haspopup="true" class="has-tip" tabindex="0" title="A rural area is a geographic area that is located outside towns and cities (whatever is not urban is considered rural) with populations of 10,000. Homes in these areas are referred to as rural housing.">rural</span> communities nationwide.</p>
+          </div>
+        </div>
+        <div class="gutter-bottom"></div>
+        <br class="reduce show-for-xlarge"> 
+        <h2 class="text-flex-22-42 weight-light medium-text-center gutter-bottom accent-primary"><a data-open="rhModal0" aria-controls="rhModal0">Duty to Serve Rural Housing</a></h2>
+        <p class="text-flex-21-28">Lenders and borrowers in rural markets in high-needs areas face specific challenges.  Here's how we're addressing them. <a class="icon-chevron-right inline" data-open="rhModal0" aria-controls="rhModal0">Learn More</a></p>
+ 
+        {{> rural-modal-learn-more}}
+        
+        <div data-equalizer="outer">
+          <div class="row large-up-2 text-left gutter-bottom" data-equalizer="inner">
+            <div class="column">
+              <div class="callout background-white" data-equalizer-watch="outer">
+                <div class="row">
+                  <div class="column medium-6">
+                   <a class="block" data-open="rhModal1" aria-controls="rhModal1">
+                    <div class="callout small no-margin background-primary horizontal-gradient-dark-left top-v-overlay" data-equalizer-watch="inner">
+                      <h3 style="margin: 0.25em 0 0.5em;">Duty to Serve rural regions</h3>
+                    </div>
+                    </a>                   
+                  </div>
+                  <div class="column medium-6">
+                    <div class="gutter-right gutter-top-small-only" style="padding-left: 0.625rem;"  data-equalizer-watch="inner">
+                      <p class="flex-up weight-normal">Supporting Middle Appalachia, Lower Mississippi Delta and the Colonias.</p>
+                      <p class="gutter-bottom-large uppercase weight-bold"><a class="icon-chevron-right inline" data-open="rhModal1" aria-controls="rhModal1">More</a></p>
+                    </div>                    
+                  </div>
+                </div>
+                {{> rural-modal-rural-regions }}
+              </div>
+            </div>
+            <div class="column">
+              <div class="callout background-white" data-equalizer-watch="outer">
+                <div class="row">
+                  <div class="column medium-6">
+                   <a class="block" data-open="rhModal2" aria-controls="rhModal2">
+                    <div class="callout small no-margin background-primary horizontal-gradient-dark-left top-v-overlay" data-equalizer-watch="inner">
+                      <h3 style="margin: 0.25em 0 0.5em;">Duty to Serve rural populations</h3>
+                    </div>
+                    </a>
+                  </div>
+                  <div class="column medium-6">
+                    <div class="gutter-right gutter-top-small-only" style="padding-left: 0.625rem;"  data-equalizer-watch="inner">
+                      <p class="flex-up weight-normal">Supporting Native American Tribes. </p>
+                      <p class="gutter-bottom-large uppercase weight-bold"><a class="icon-chevron-right inline" data-open="rhModal2" aria-controls="rhModal2">More</a></p>
+                    </div>
+                  </div>
+                </div> 
+                {{> rural-modal-rural-populations }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gutter-bottom gutter-top-large"></div>
+    </div>    
+  </div>
+</div>
+
+<div class="background-primary landing-band vertical-gradient-dark-top">   
+  <div class="row-container text-center medium-text-left"> 
+    <div class="row gutter-bottom gutter-top">
+      <div class="column">
+        <br class="reduce show-for-xlarge">  
+        {{> rural-videofeature }}
+      </div>
+    </div>     
+  </div>
+</div>
+
+
+<div class="background-sapphire landing-band-sides-only notch-wrapper horizontal-gradient-dark-right">  
+  <div class="mid-diamond-shape">
+  </div> 
+  <div class="row-container-narrow text-center medium-text-left">
+    <div class="row gutter-top gutter-bottom">
+      <div class="column">
+        <div class="gutter-top">
+          {{> rural-didyouknow }}
+        </div>
+      </div>
+    </div>    
+  </div>
+</div>
+
+
+<div class="background-white landing-band"> 
+  <br class="reduce show-for-xlarge">
+  <div class="small-to-default"></div>  
+  <div class="row-container">
+    <div class="row gutter-bottom gutter-top">
+      <div class="column xlarge-offset-1 large-4">
+        <p class="text-flex-15-18 uppercase weight-bold accent-primary half-margin-bottom">Heat Map</p>
+        <h2 class="text-flex-26-42 gutter-bottom accent-sapphire no-margin">2018 High-Needs Rural Areas for Duty to Serve</h2>
+        <p><a class="button secondary" href="/singlefamily/duty-to-serve/map.html">Interactive Heatmap</a></p>
+      </div>
+      <div class="column large-8 xlarge-6 end">
+        <figure><a class="block map-hover" href="/singlefamily/duty-to-serve/map.html"><img class="no-border" alt="heat map of the united states" src="/singlefamily/duty-to-serve/images/heat-map.png"></a></figure>
+      </div>
+      
+    </div>    
+  </div>
+</div>
+
+
+
+<div class="background-primary landing-band vertical-gradient-dark-top">   
+  <div class="row-container"> 
+    <div class="row gutter-bottom gutter-top">
+      <div class="column">
+        <br class="reduce show-for-xlarge">  
+        <div class="row">
+          <div class="column xlarge-offset-1 large-4"> 
+            <p class="text-flex-15-18 uppercase weight-bold accent-iceblue half-margin-bottom">Partnership Profile</p>
+            <h2 class="text-flex-26-42 gutter-bottom no-margin">Native American Homebuyer Outreach with South Dakota's Homebuyer Education Resource Organization (HERO)</h2>
+          </div>
+          <div class="column large-8 xlarge-6 end"> 
+            <p class="flex-up">Freddie Mac, in collaboration with the <a class="accent-white" href="http://sdnativehomeownershipcoalition.org/" rel="external"><u>South Dakota Native Homeownership Coalition</u></a> and <a class="accent-white" href="https://www.7sistersconsulting.com/" rel="external"><u>Seven Sisters Community Development Group, LLC,</u></a> has partnered with <a class="accent-white" href="http://sdhomebuyered.org/" rel="external"><u>South Dakota&rsquo;s Homeownership Education Resource  Organization (HERO)</u></a> to help put aspiring Native American homeowners on  the path to homeownership. As a first step, Freddie Mac is working with HERO to  train and certify homebuyer education counselors. The training and  certification component is a critical area to homebuyer education since the  lack of counselors&rsquo; training and certification was recognized as a barrier to  the 16 Native housing organizations identified as potential HERO Partners. Once  certified, these counselors will be able to provide homebuyer education and  financial literacy to Native Americans in the South Dakotan Indian areas.</p>
+          </div>
+        </div> 
+      </div>
+    </div>     
+  </div>
+</div>
+
+
+
+<div class="background-foam landing-band">   
+  <div class="row-container text-center">
+    <div class="row gutter-bottom gutter-top">
+      <div class="column">
+        <br class="reduce show-for-xlarge">
+        <h2 class="text-flex-26-42 accent-sapphire">What's New</h2>
+        <div class="small-to-default"></div>
+        {{> rural-whatsnew}}
+      </div>
+    </div>    
+  </div>
+</div>
+
+
+
+<div class="background-primary landing-band diagonal-band">   
+  <div class="row-container text-center medium-text-left"> 
+    <div class="row gutter-top gutter-bottom">
+      <div class="column">
+        <br class="reduce show-for-xlarge">  
+        {{> rural-quotes}}
+      </div>
+    </div>     
+  </div>
+</div>
+
+
+
+<div class="background-primary landing-band vertical-gradient-dark-top">
+  <div class="row-container">
+    <div class="row gutter-bottom-large large-up-3 text-flex-16-20">
+      <div class="column gutter-bottom">
+        <h3 class="text-flex-18-24 uppercase no-margin"><span  style="opacity: .6;">Resources</span></h3>
+        <hr />
+        <div class="gutter-right">
+          <div class="gutter-right-medium-only gutter-right-xlarge">
+            <p><a class="block" data-open="ahFAQModal" aria-controls="ahFAQModal"><strong>FAQs</strong> – Frequently Asked Questions on the NextJob Re-employment Services Program</a></p>
+            <p><a class="block" href="/about/duty-to-serve/docs/Freddie-Mac-Underserved-Markets-Plan.pdf"><strong>DTS plan</strong></a></p>
+            <p><a class="block" href="/singlefamily/duty-to-serve/DTS-Fact-Sheet.pdf"><strong>Freddie Mac Duty to Serve Fact Sheet</strong></a></p>
+            <p><a class="block" href="/singlefamily/expmkts/mhle.html"><strong>MH fact sheet/mortgage requirements</strong></a></p>
+             <br class="hide-for-large">
+          </div>
+        </div>
+        <div class="reveal background-sapphire" id="ahFAQModal" data-reveal>
+          <div class="modal-content row-container">
+            <div class="row">
+              <div class="column xlarge-offset-1 xlarge-10 end">
+                <div class="modal-header">
+                  <h2>Single-Family Duty to Serve</h2>
+                </div>
+                <div class="modal-page-header">
+                  <h1>FAQs on the NextJob Re-employment Services Program</h1>
+                </div>
+                <div class="callout large background-white">
+                  <div class="callout small-to-large">
+                    <p>As part of our <a href="/about/duty-to-serve/">Duty to Serve</a> plan to increase homeownership in historically underserved markets, Freddie Mac has partnered with a national re-employment solutions company, NextJob, to provide re-employment services and job search coaching for unemployed or underemployed Home Possible® borrowers and aspiring homeowners living in designated <a rel="external" href="https://www.fhfa.gov/DataTools/Tools/Pages/Duty-to-Serve-High-Needs-Counties-Map.aspx">Duty to Serve high-needs areas.</a></p>
+                    <p>This program will assist eligible homeowners to increase their re-employment prospects after circumstances that disrupt their ability to make timely mortgage payments, such as a job loss, reduced hours or other employment challenges. It is a proactive solution to help homeowners get back on track and stay in their homes. </p>
+                    <p>Below are answers to frequently asked questions about this homeowner re-employment services program that <a href="/singlefamily/news/2018/0606_nextjob_reemployment_services.html">launched</a> on June 13, 2018.</p>
+                    {{> rural-faqs }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column gutter-bottom">
+        <h3 class="text-flex-18-24 uppercase no-margin"><span style="opacity: .6;">From Our Leaders</span></h3>
+        <hr />
+        <div class="gutter-right">
+          <div class="gutter-right-medium-only gutter-right-xlarge">
+            <p><a class="block" href="/perspectives/danny_gardner/20160919_saving_resources.html"><strong>Saving Your Resources and the Earth's</strong> &ndash; Danny Gardner</a></p>
+            <p><a class="block" href="/perspectives/david_leopold/20161003_rental_green_advantage.html"><strong>Rental Housing Needs a Green Advantage</strong> &ndash; David Leopold</a></p>
+            <br class="hide-for-large">
+          </div>
+        </div>
+      </div>
+      <div class="column gutter-bottom">
+        <h3 class="text-flex-18-24 uppercase no-margin"><span style="opacity: .6;">Freddie Mac Learning</span></h3>
+        <hr />
+        <div class="gutter-right">
+          <div class="gutter-right-medium-only gutter-right-xlarge">
+            <p><a class="block" href="#"><strong>Title of Learning Resource</strong> – synopsis or additional info | Date, Location, Etc.</a></p>
+            <p><a class="block" data-open="eventsModalRH" aria-controls="eventsModalRH"><strong>Industry Insights &amp; Conference</strong></a></p>
+          </div>
+        </div>
+         {{> rural-modal-events}}
+      </div>
+    </div>
+  </div>
+</div>
+{{> footer-landing-duty}}

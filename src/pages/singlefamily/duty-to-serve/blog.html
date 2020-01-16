@@ -1,0 +1,38 @@
+---
+layout: landing-sf
+title: "Blog" 
+subtitle: "This is the blog description"
+url:  http://www.freddiemac.com/singlefamily/duty-to-serve/blog.html
+bodyclass: 
+stylesheet: [/ss/app_landing.css, /ss/app_sf-landing.css]
+share: false
+---
+{{> sf-duty-header}}
+<style>
+ .landing-band:not(.background-primary):nth-child(odd) { background-color: #f4f4f4;}
+</style>
+<!--HERO IMAGE-->
+<div class="notch-wrapper">
+  <div class="landing-band landing-hero background-primary sfdts-blog">    
+    <div class="row-container text-center medium-text-left">
+      <div class="row small-collapse medium-uncollapse gutter-bottom">
+          <div class="column">
+            <p class="text-flex-15-18 uppercase weight-bold  accent-transparency25 no-margin">Freddie Mac Single-Family Duty to Serve</p>
+            <h1 class="text-flex-30-48 weight-black gutter-bottom">Industry Insights</h1>
+            <!--<h2 class="weight-light gutter-bottom text-flex-21-28 accent-transparency25"><em>This is the blog subtitle</em></h2>-->
+            <br class="reduce gutter-bottom">
+          </div>      
+      </div>      
+    </div>   
+  </div>
+  <div class="notch-top-v background-white"></div>
+  <div class="notch-top-v background-concrete"></div>
+</div>
+<!--END HERO IMAGE-->
+           
+
+{{> sf-blog-article2}}  
+      
+{{> sf-blog-article1}}              
+         
+{{> footer-landing-duty}}

@@ -1,0 +1,169 @@
+// oodometer and numbers
+.odometer1,
+.odometer2 {
+  color: white;
+  font-size: rem-calc(28);
+  font-size: calc(28px + 52 * (100vw - 330px) / 930);
+  line-height: 1;
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(80);
+  }
+}
+.dollarsign {
+  display: inline-block;
+  width: 0.5em;
+  padding: 0.2em 0;
+  vertical-align: top;
+}      
+.odometer-number {
+  display: inline-block;
+  margin-bottom: 0.2em;
+  background: $fm-green;
+  padding: 0.25em 0;
+  width: 1em;
+  .odometer1 & {
+    background: mix($black, $fm-green, 9.3%);
+  }
+}
+.odometer-building0,
+.odometer-building7,
+.odometer-building8,
+.odometer-house0,
+.odometer-house5,
+.odometer-house6,
+.odometer-house8,
+.odometer-house9,
+.odometer-1,
+.odometer-5,
+.odometer-6,
+.odometer-t,
+.odometer-r,
+.odometer-i,
+.odometer-l,
+.odometer-o,
+.odometer-n {
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 1em;
+  background-position: 50% 2%;
+  &.odometer-animate {
+    transition: background 1.6s linear 0.7s;
+  }
+
+}
+.odometer-1,
+.odometer-5,
+.odometer-6,
+.odometer-t,
+.odometer-r,
+.odometer-i,
+.odometer-l,
+.odometer-o,
+.odometer-n {
+  min-height: 0.95em;
+}
+
+.odometer-animate {
+  background-position: 50% 99.5%;
+  @include breakpoint(medium) {
+    background-position: 50% 100%;
+  }
+  
+}
+.odometer-separator-comma,
+.odometer-separator-period {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: contain;
+  display: inline-block;
+  margin: 0 -0.35%;
+}
+.odometer-separator-comma {
+  min-height: 1em;
+  width: 1.5%;
+  background-image: url("/transform/images/comma.png");
+}
+.odometer-separator-period {
+  min-height: 0.35em;
+  width: 1.5%;
+  background-image: url("/transform/images/period.png");
+}
+.odometer-1 {
+  background-image: url("/transform/images/sprite-1.png");
+
+}
+.odometer-5 {
+  background-image: url("/transform/images/sprite-5.png");
+}
+.odometer-6 {
+  background-image: url("/transform/images/sprite-6.png");
+}
+.odometer-t {
+  background-image: url("/transform/images/sprite-T.png");
+}
+.odometer-r {
+  background-image: url("/transform/images/sprite-R.png");
+}
+.odometer-i {
+  background-image: url("/transform/images/sprite-I.png");
+}
+.odometer-l {
+  background-image: url("/transform/images/sprite-L.png");
+}
+.odometer-o {
+  background-image: url("/transform/images/sprite-O.png");
+}
+.odometer-n {
+  background-image: url("/transform/images/sprite-N.png");
+}
+.odometer-house6 {
+  background-image: url("/transform/images/house-6-sprite.png");
+}
+.odometer-house5 {
+  background-image:url("/transform/images/house-5-sprite.png");
+}
+.odometer-house8 {
+  background-image:url("/transform/images/house-8-sprite.png");
+}
+.odometer-house9 {
+  background-image:url("/transform/images/house-9-sprite.png");
+}
+.odometer-house0 {
+  background-image: url("/transform/images/house-0-sprite.png");
+}
+.odometer-building0 {
+  background-image: url("/transform/images/building-0-sprite.png");
+}
+.odometer-building7 {
+  background-image: url("/transform/images/building-7-sprite.png");
+}
+.odometer-building8 {
+  background-image: url("/transform/images/building-8-sprite.png");
+}
+
+.speed8.odometer-animate {
+  transition: background 1.5s linear 0.7s;
+}
+.speed7.odometer-animate {
+  transition: background 1.5s linear 0.6s;
+}
+.speed6.odometer-animate {
+  transition: background 1.5s linear 0.5s;
+}
+.speed5.odometer-animate {
+  transition: background 1.5s linear 0.4s;
+}
+.speed4.odometer-animate {
+  transition: background 1.5s linear 0.3s;
+}
+.speed3.odometer-animate {
+  transition: background 1.4s linear 0.2s;
+}
+.speed2.odometer-animate {
+  transition: background 1.4s linear 0.1s;
+}
+.speed1.odometer-animate {
+  transition: background 1.4s linear 0s;
+}
+

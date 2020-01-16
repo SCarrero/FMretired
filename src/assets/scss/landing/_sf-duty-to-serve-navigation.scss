@@ -1,0 +1,150 @@
+header .landing-band-sides-only,
+.landing-band-sides-only .row-container,
+.landing-band-sides-only .nav-wrapper-duty {
+ @include breakpoint(large down){
+   padding-left: 0;
+   padding-right: 0;
+   max-width: 100%;
+ }
+}
+
+#ribbon-nav {
+  max-width: rem-calc(1220);
+}
+.nav-main {
+  .nav-section {
+    &.active a,
+    a:hover,
+    a:focus,
+    a:active  {
+      @include breakpoint(xlarge){
+        color: $primary-color;
+      }
+    }
+    a {
+      color: $medium-gray;
+      @include breakpoint(xlarge){
+        border-bottom-width: 0; 
+        padding-top: 3.6rem;
+        padding-bottom: 2rem;
+      }
+      @include breakpoint (large down) {
+        width: 100%;
+        display: block;
+        padding: 1.75rem 3.25rem 1.5rem 1.875rem;
+        color: $white;
+        background: darken($primary-color, 3%);
+        border-top-width: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      
+      @include breakpoint (large only) {
+        padding-left: rem-calc(40);
+      }
+    } 
+  }
+}
+.logo-corp {
+  @include breakpoint(medium){
+    padding-top: rem-calc(23);
+    padding-bottom: rem-calc(19);
+  }
+  @include breakpoint(medium down){
+   padding-left: rem-calc(20px);
+  }
+  @include breakpoint(large only){
+   padding-left: rem-calc(30px);
+  }
+}
+.nav-main > div:last-child {
+ @include breakpoint(xlarge){
+    padding-right: rem-calc(10);
+  }
+}
+.logo-wrapper-duty {
+  @include breakpoint(large down){
+    background: $white;
+    z-index: 400;
+    position: relative;
+  }
+  @include breakpoint(xlarge){
+    width: rem-calc(200); //12.5rem
+    + .nav-wrapper-duty {
+      max-width: calc(100% - 13rem);
+      float: right;
+    }
+  }
+}
+.nav-wrapper-duty {
+  position: relative;
+  z-index: 100;
+}
+#nav-duty {
+  font-weight: $global-weight-medium;
+  line-height: 1;
+  font-size: rem-calc(16);
+  position: relative;
+  .menu > li > a { // overriding the ribbon default
+    @include breakpoint(large down) {
+      padding: rem-calc(28 52 24 30);
+    }
+  }
+  .top-bar {
+    @include breakpoint(xlarge) {
+      float: left;
+    }
+  }
+  .nav-main {   
+    @include breakpoint(large down) { 
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 399;
+      &[aria-expanded="false"] {
+        display: none;
+      }
+    }
+  }
+}  
+
+// mobile sticky -- no time to solve for desktop sticky
+// and foundation has it working regardless of scroll up/down 
+
+@include breakpoint(large down) {
+  .sticky-container {
+    position: relative;
+  }
+  .sticky {
+    position: relative;
+    width: 100%;
+    z-index: 200;
+    transform: translate3d(0, 0, 0);  //makes some devices run their hardware acceleration for smoother transitions
+    &.is-stuck {
+      position: fixed;
+      z-index: 205;
+      width: 100%;
+    }
+    &.is-anchored {
+      position: relative;
+      right: auto;
+      left: auto;
+    }
+    &.is-at-top {
+      top: 0;
+    }
+  }
+}
+@include breakpoint(xlarge) {
+  .sticky-container {
+    position: relative;
+  }
+  .sticky {
+    position: relative;
+    &.is-stuck {
+      position: relative;
+    }
+    &.is-anchored {
+      position: relative;
+    }
+  }
+}

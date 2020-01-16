@@ -1,0 +1,131 @@
+﻿{{!-- This is the default -- uses corporate js/css. --}}
+
+<!doctype html>
+
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{{sanitize title}}}</title>
+    <meta property="og:title" content="{{{sanitize title}}}" />
+    <meta name="twitter:title" content="{{{sanitize title}}}"/>
+    {{!-- only output abstract if abstract exists --}}
+    {{#if abstract}}
+    <meta name="abstract" content="{{ abstract }}" />
+    {{/if}}
+    {{!-- only output keywords if keywords exists --}}
+    {{#if keywords}}
+    <meta name="keywords" content="{{ keywords }}" />
+    {{/if}}
+    {{!-- output default twittercard if custom twittercard doesn't exists --}}
+    {{#if twittercard}}
+    <meta name="twitter:card" content="{{ twittercard }}" />
+    {{else}}
+    <meta name="twitter:card" content="summary" />
+    {{/if}}
+    <meta name="twitter:site" content="@FreddieMac" />
+    {{!-- only output description if description exists --}}
+    {{#if description}}
+    <meta name="Description" content="{{ description }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta name="twitter:description" content="{{ description }}" />
+    {{/if}}
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website" />
+    {{!-- output default image if custom image doesn't exists --}}
+    {{#if image}}
+    <meta property="og:image" content="{{ image }}" />
+    <meta name="twitter:image" content="{{ image }}" />
+    {{else}}
+    <meta property="og:image" content="http://www.freddiemac.com/images/banner/gen_social_image.jpg" />
+    {{/if}}
+    {{!-- only output url if url exists --}}
+    {{#if url}}
+    <meta property="og:url" content="{{ url }}" />
+    {{/if}}
+    {{!-- only output author if author exists --}}
+    {{#if author}}
+    <meta name="author" content="{{ author }}" />
+    {{/if}}
+    <meta name="theme-color" content="#88BD45">
+    <script>document.documentElement.classList.remove("no-js");</script>
+    <link rel="subresource" href="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/ss/app_corp2.css" />
+    {{#if (isString stylesheet) }}
+      <link rel="stylesheet" href="{{stylesheet}}" />
+    {{else}}
+      {{#each stylesheet}}
+      <link rel="stylesheet" href="{{.}}" />
+      {{/each}}    
+    {{/if}}
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KZFS9PD');</script>
+    <!-- End Google Tag Manager -->
+  </head>  
+  <body id="body">     
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KZFS9PD"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe> </noscript>
+  <!-- End Google Tag Manager -->
+    <div class="show-for-print">FreddieMac.com</div> 
+    <div class="iw_section"> 
+      {{> body}}
+    </div> 
+    <div class="iw_section"> 
+      <div class="row iw_row iw_stretch"> 
+        <div class="columns iw_columns large-12"> 
+    
+          {{#if crosspromo}}
+          {{> (lookup . 'crosspromo') }}
+          {{/if}}
+          
+          {{#if share}}
+          {{> share-widget }}
+          {{/if}}
+                    
+          {{#if prefooter}}
+          {{> (lookup . 'prefooter') }}
+          {{/if}}
+          
+          {{#if footer}}
+          <div class="iw_component">
+           {{> (lookup . 'footer') }}
+          </div> 
+          {{/if}}
+          
+        </div> 
+      </div> 
+    </div>
+
+    <div class="iw_section"> 
+      <div class="row iw_row iw_stretch"> 
+        <div class="columns iw_columns large-12"> 
+          <div class="iw_component">
+            {{> corp-footer-js }}
+            {{#if (isString javascript) }}
+                <script src="{{ javascript }}"></script>
+            {{else}}
+              {{#each javascript}}
+                <script src="{{ this }}"></script>
+              {{/each}}    
+            {{/if}}
+            {{#if onload }}
+              <script type="text/javascript">
+              window.onload = {{onload}};
+              </script>
+            {{/if}}
+          </div> 
+        </div>        
+      </div> 
+    </div>   
+  </body>
+</html>

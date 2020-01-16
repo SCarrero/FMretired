@@ -1,0 +1,78 @@
+﻿---
+title: "Our Transformation: Strength in Stability"
+layout: corporate
+herotype: title
+description: "Our Transformation"
+image: "http://www.freddiemac.com/transform/images/transformation-social-share.jpg"
+keywords:
+url:  http://www.freddiemac.com/transform/
+bodyclass: 
+stylesheet: ["/ss/app_landing.css", "/ss/app_landing-transformation-anim.css", "/ss/vendor/timeline.css"]
+navLevel1: 'section-about'
+navLevel2: 'subnav-about-transform'
+breadcrumb: [{"name":"Home","url":"/"},{"name":"About","url":"/about/"},{"name":"Our Transformation"}]
+share: true
+crosspromo:  "transform-content"
+javascript: ["/js/vendor/ScrollMagic.min.js","/js/vendor/timeline.js"]
+onload: 
+---
+
+<style type="text/css">
+.page-title {
+  display: none;
+}
+.background-offwhite {
+  background: #eff4f8;
+}
+.timeline-text.active {
+  color: #fff;
+}  
+@media screen and (min-width:41.5em) and (max-width: 45.4em) {
+  .show-at-medium-large {
+    min-height: 1.2rem;
+  }
+}
+@media screen and (min-width:45.5em) and (max-width: 61.2em) {
+  .show-at-medium-large {
+    padding: 0.65em;
+  }
+}
+@media screen and (min-width:50.5em) and (max-width: 61.2em) {
+  .show-at-medium-large {
+    padding: 0.9em;
+  }
+}
+@media screen and (min-width: 61.25em){
+  .stretch-at-large {
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 78.75em) {
+  .stretch-at-large {
+    letter-spacing: 0.05em;
+  }
+}
+</style>
+
+<div class="iw_component">
+<!-- content is inside landing partial named transform-content -->
+</div>
+
+<script>
+
+function onLoad() {
+  // init ScrollMagic Controller
+  var controller = new ScrollMagic.Controller();
+
+  // Create Scene
+  var slideOutUp_scene = new ScrollMagic.Scene({
+    triggerElement: '#animate-trigger',
+    triggerHook: 0.9,
+    duration: '100%'
+  })
+  .setClassToggle('.stack', 'animate')
+  .addTo(controller);
+}
+
+window.onload = onLoad;
+</script>

@@ -1,0 +1,276 @@
+---
+title: One Roof
+layout: plainjane
+grid: 
+bodyclass: ms-fullscreenmode
+stylesheet: ['/ss/vendor/sharepoint-overrides.css', 
+  '/ss/app_corp2.css',
+  '/ss/app_landing.css', 
+  "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900"
+]
+javascript: ['/js/vendor/jquery-3.4.1.min.js', 
+  '/js/vendor/TweenMax.min.js', 
+  '/js/vendor/ScrollMagic.min.js', 
+  '/js/vendor/animation.gsap.min.js',
+  '/js/vendor/plugins/ScrollToPlugin.min.js', 
+  '/js/vendor/scroll-nav.js'
+  ]
+---
+<!--
+<link rel="stylesheet" href="/sites/HomeFrontUAT/OneRoof/Pages/scripts/sharepoint-overrides.css" />
+<link rel="stylesheet" href="/sites/HomeFrontUAT/OneRoof/Pages/scripts/app_corp2.css" />
+<link rel="stylesheet" href="/sites/HomeFrontUAT/OneRoof/Pages/scripts/app_landing.css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
+-->
+
+<style>
+#divRow2 {
+  height: 0;
+  overflow: hidden;  
+}
+.iw_component {
+  min-width: 360px;
+}
+.video-wrapper {
+  max-height: 430px;
+  width: 100%;
+  overflow: hidden;
+}
+.video-wrapper video {  
+  width: 100%;
+  padding-bottom: 56.25%
+  margin: 0;
+}
+.band-top {
+  margin-top: -32px;
+  padding-top:32px; 
+  line-height: 1;
+}
+.sticky-header {
+  position: fixed;
+  position:-webkit-sticky; 
+  position:sticky;
+  top:0;
+  z-index: 600;
+  width: 100%;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+  .sticky-header {
+    position: fixed;
+    width: 100%;
+  }
+  .band-top {
+    margin-top: -1px;
+  }
+}
+section.row-container-narrow {
+  padding: 5em 0;
+}
+section:last-of-type.row-container-narrow {
+  padding: 8em 0;
+}
+.anchor-nav {
+  margin-right: -12px;
+}
+.anchor-nav a {
+  padding: 5px 6px 4px;
+  border-radius: 0;
+  color: white;
+  transition: background 0.25s ease 0s; 
+  box-decoration-break: clone; 
+  text-decoration: done;  
+}
+.anchor-nav a.active {
+  background: rgba(265, 265, 265, 0.2); 
+}
+.header-flex {
+  height: 100%;
+  width: 100%;
+  max-height: 430px;  
+  /* Standard Flexbox */
+  display: flex;
+  flex: 1 0 100%;
+  flex-flow: column wrap; 
+  justify-content: flex-start;
+  align-content: space-between;
+  align-items: stretch;
+}
+.header-flex h1, 
+.header-flex h2 {
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+h2 {
+  margin-top: auto;
+}
+.flex-list {
+  display: flex;
+  flex: 0 1 100%;
+  flex-flow: row wrap; 
+  justify-content: space-between;   /* for IE11 */
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: baseline;
+  text-align: center;
+}
+.flex-list div { 
+  margin: 0.75em 0;
+}
+.flex-list div:not(.arrow-divider) { 
+  min-width: 100px;
+}
+@media screen and (min-width: 50em) {
+  .video-wrapper {
+    max-height: 540px;
+  }
+  .header-flex {
+    max-height: 540px;
+  }
+}
+</style>
+<div class="iw_component position-relative">
+  <div class="sticky-header" style="background-color: rgba(0,0,0,0.3);">
+    <div class="landing-band-sides-only">
+      <div class="row-container">
+        <div class="row">
+          <div class="column"> 
+            <nav role="navigation" class="anchor-nav weight-normal">              
+              <div class="float-right flex-down">
+                <a class="inline-block" href="#section-1" id="anchor1">Who we are</a>
+                <a class="inline-block" href="#section-2" id="anchor2">What we do</a>                               
+                <a class="inline-block" href="#section-3" id="anchor3">Contact Us</a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>       
+  </div>
+  <div class="background-blue band-top" id="top">
+    <section class="position-relative video-wrapper">
+      <video autoplay loop muted playsinline>
+        <source src="https://freddiemac.sharepoint.com/sites/HomeFront/OneRoof/Pages/media/Ocean-2171.mp4" type="video/mp4">
+      </video>
+      <div class="landing-band-sides-only" style="top: 0; left: 0; right:0; bottom: 0; position:absolute;">
+        <div class="row-container-narrow" style="height: 100%;">
+          <div class="row" style="height: 100%;">
+            <div class="column gutter-top" style="height: 100%;">
+              <div class="header-flex"> 
+                <h1 class="text-flex-16-20 weight-normal">One Roof logo</h1>
+                <h2 class="text-flex-26-65 gutter-bottom">In-house creative, <br>outside-the-box thinking</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>  
+  <div id="section-1" class="clearfix">
+    <div class="background-primary landing-band-sides-only">
+      <section class="row-container-narrow">
+        <div class="row">
+          <div class="column">
+            <div class="gutter-top gutter-bottom">
+              <h2 class="weight-normal">Hi.</h2>
+              <p class="enlarge">
+                We’re One Roof—Freddie Mac’s internal creative agency. Our team has decades of experience in building brands, developing award-winning integrated campaigns, and producing everything from documentaries to display ads for local, national, and global clients. And now we’re here to make something awesome with you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="background-blue landing-band-sides-only">
+      <section class="row-container-narrow">
+        <div class="row">
+          <div class="column">
+            <div class="gutter-top gutter-bottom">
+              <h2 class="weight-normal">Client Experience</h2>
+              <p class="enlarge">
+                [[ insert some logos ]]
+              </p>    
+            </div>    
+          </div>
+        </div>      
+      </section>          
+    </div> 
+  </div>
+  <div id="section-2" class="clearfix">
+    <div class="background-gray landing-band-sides-only">
+      <section class="row-container-narrow">
+        <div class="row">
+          <div class="column">
+            <div class="gutter-top gutter-bottom">
+              <h2 class="weight-normal">What makes us, us.</h2>
+              <p class="enlarge">
+                Purposeful creative is our calling card. We use communications strategy and research to power big ideas and believe that meaningful collaboration is key to producing our best work. Like you, we are called to make home possible. Our job is to find more impactful ways to tell your story and connect with your audience.
+              </p>    
+            </div>    
+          </div>
+        </div>      
+      </section>  
+    </div> 
+    <div class="background-blue landing-band-sides-only">
+      <section class="row-container-narrow">
+        <div class="row">
+          <div class="column">
+            <div class="gutter-top gutter-bottom">
+              <h2 class="weight-normal">Our Process</h2>
+              <div class="flex-list">
+                <div>
+                <svg height="60" width="60"><circle cx="30" cy="30" r="30" fill="#FFF" /></svg><br>Creation
+                </div>
+                <div class="arrow-divider"> 
+                <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg"><path fill="#FFF" d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/></svg>
+                </div>
+                <div>
+                <svg height="60" width="60"><circle cx="30" cy="30" r="30" fill="#FFF" /></svg><br>Ideation
+                </div>
+                <div class="arrow-divider">
+                <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg"><path fill="#FFF" d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/></svg>
+                </div>
+                <div>
+                <svg height="60" width="60"><circle cx="30" cy="30" r="30" fill="#FFF" /></svg><br>Discovery 
+                </div>
+                <div class="arrow-divider">
+                <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg"><path fill="#FFF" d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/></svg>
+                </div>
+                <div>
+                <svg height="60" width="60"><circle cx="30" cy="30" r="30" fill="#FFF" /></svg><br>Production 
+                </div>
+                <div class="arrow-divider">
+                <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg"><path fill="#FFF" d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/></svg>
+                </div>
+                <div>
+                <svg height="60" width="60"><circle cx="30" cy="30" r="30" fill="#FFF" /></svg><br>Distribution
+                </div>
+              </div> 
+            </div>    
+          </div>
+        </div>      
+      </section>  
+    </div>
+  </div>
+  <div id="section-3" class="clearfix">
+    <div class="background-primary landing-band-sides-only">
+      <section class="row-container-narrow">
+        <div class="row">
+          <div class="column">
+            <div class="gutter-top gutter-bottom">
+              <h2 class="weight-normal">Let’s talk</h2>
+              <p class="enlarge">
+                Looking for creative support on an upcoming project? Click here to drop a line and we will get back to you shortly.
+              </p>  
+              <p><a class="button primary" href="#">Get in Touch</a></p>
+            </div>    
+          </div>
+        </div>      
+      </section>  
+    </div> 
+    <div class="footer-bottom-edge"></div>
+  </div> 
+</div>

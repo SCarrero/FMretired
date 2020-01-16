@@ -1,0 +1,125 @@
+.enlarge {   // most body copy
+  font-size: 1rem;
+  font-size: calc(18px +  3 * (100vw - 320px) / 1180);
+  letter-spacing: -0.048em;
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(21); 
+  }
+}
+h1 {
+  font-size: calc(46px +  24 * (100vw - 320px) / 1180);
+  line-height: 0.9;
+  letter-spacing: 0.007em;
+  margin: 0 0 0.4em;
+  z-index: 19;
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(70); 
+  }
+}
+h2 {
+  font-size: calc(28px +  17 * (100vw - 320px) / 1180); 
+  line-height: 1;
+  letter-spacing: 0.022em;
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(45); 
+  }    
+}
+h3 {
+  font-size: rem-calc(21);
+  line-height: 1;
+  font-family: $body-font-family;
+  font-weight: $global-weight-bold;
+  letter-spacing: -0.07em;
+  margin: 0 0 0.9em;
+  @include breakpoint(small only) {
+    margin-top: 1.3em; 
+  }
+  @include breakpoint(large) {
+    font-size: rem-calc(22); 
+    letter-spacing: -0.087em;
+  }
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(23); 
+  }    
+}
+h4 {
+  font-size: calc(16px +  2 * (100vw - 320px) / 1180);
+  line-height: 1;
+  letter-spacing: 0.046875em;
+  @include breakpoint(xxlarge) {
+    font-size: rem-calc(18); 
+  }    
+}
+h5 {
+  font-size: rem-calc(16); 
+  line-height: 1.06;
+  letter-spacing: 0.046875em;
+}
+.legal-footer {
+  color: $medium-gray;
+  a {
+    color: $medium-gray;    
+  }
+  a:hover,
+  a:focus,
+  a:active {
+    color: $periwinkle;
+  }
+}
+a.block {
+  color: inherit;
+}
+form.signup {
+  max-width: rem-calc(585);
+  margin: 0 auto 1rem;
+  font-size: rem-calc(20);   
+  @include breakpoint(medium) {
+    font-size: rem-calc(18);
+  }     
+  @include breakpoint(large) {
+    font-size: rem-calc(21);
+  }   
+  @include breakpoint(xlarge) {
+    font-size: rem-calc(24);
+  } 
+  .input-group  {
+    padding-right: 0.5rem; 
+  }
+  .button {
+    font-family: $header-font-family;
+    @include disable-mouse-outline;
+  }
+}
+
+label[for='email'] {
+  position: relative;
+  padding: 0;
+  margin: 0;  
+  font-size: inherit;
+  &.is-invalid-label::before {
+    content: '';  
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 3px solid $cinnabar;
+    border-right-width: 0;  
+  } 
+}
+.is-invalid-input:not(:focus) {
+  color: $coal;
+  &::placeholder {
+    color: $coal;  
+  }
+}
+.form-error {
+  color: $cinnabar;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  margin-top: 0.5em;
+  position: absolute;
+  bottom: -3rem;
+  left: 0;
+}  
