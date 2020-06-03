@@ -1,0 +1,86 @@
+<style>
+.divider-bof {
+   border-left: none;
+}
+@media screen and (min-width:46.25em) {
+  .divider-bof {
+    border-left: 2px solid hsla(0,0%,100%,.5);
+    padding-left: 50px;
+    margin-left: 45px;
+ } 
+}
+.bof-logo {
+   text-align: center;
+   padding-bottom: 50px;
+}
+@media screen and (min-width:46.25em) {
+  .bof-logo {
+    text-align: right;
+    padding-bottom: 7rem;
+ } 
+}
+@media print,screen and (min-width:61.25em) {
+  .bof-logo {
+    padding-bottom: 5rem;
+  }
+ }
+.title-bof {
+  font-size: 1.75rem;
+  font-size: calc(28px + 4 * (100vw - 320px)/1180);
+  font-weight: 900;
+  line-height: 1.2;
+  color: #fff;
+  text-align: center;
+  @include breakpoint(large) {
+      font-size: 2rem;
+  }
+}
+@media screen and (min-width:46.25em) {
+  .title-bof {
+    text-align: left;
+  }
+}
+@media screen and (min-width:46.25em){
+ .bof-flex { 
+   display: flex; 
+   flex-flow: row nowrap; 
+   align-items: flex-end;
+   }
+ }
+.background-bof {
+  background-image: url("http://www.freddiemac.com/corporate/homepage/images/BOF_bg.png");
+  background-size: cover;
+  background-position: center;
+}
+.homepage-bof {
+padding: 6rem 1rem 6rem 1rem;
+@media screen and (min-width:46.25em) {
+  .homepage-bof { 
+    padding: 3rem 0 3rem 0;
+  }
+ }
+}
+</style>
+
+<div class="background-primary background-bof homepage-bof">
+  <div class="row-wrapper">
+    <div class="row bof-flex">
+      <div class="column large-3 large-offset-1 xlarge-4 bof-logo">
+        <img class="no-border" style="width:255px;" src="http://www.freddiemac.com/corporate/homepage/images/BOF_identifier.svg">
+	  </div>
+      <div class="column large-9 xlarge-8 divider-bof">
+        <div class="row">
+          <div class="column large-9 xlarge-7">
+             <p class="title-bof">What do we know about the borrowers of the future?</p>
+          </div>
+          <div class="column">
+             <p class="title-bof">Research. Insights. Stories. Solutions.</p>
+          </div>
+        </div>
+        <div class="text-center medium-text-left"><a class="button hollow" href="http://www.borrowersofthefuture.com"><span class="weight-medium lowercase">borrowersofthefuture.com</span></a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

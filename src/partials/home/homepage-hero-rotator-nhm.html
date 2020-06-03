@@ -1,0 +1,66 @@
+<style>
+  .background-sky {
+    background: #D5F3FF;
+    overflow: hidden;
+  }
+
+  .jen-house {
+    left: 0;
+    top: 45px;
+    width: 84%;
+  }
+
+  @media print,
+  screen and (min-width: 35.625em) {
+    .jen-house {
+      top: 40%;
+      width: 87%;
+    }
+  }
+
+  @media screen and (min-width: 61.25em) {
+    .jen-house {
+      width: 100%;
+      left: 0;
+      top: 0.375rem;
+      /*fake top alignment to h2 text*/
+    }
+  }
+</style>
+<div class="background-gray">
+  <div class="orbit bullets-overlay ease slow" role="region" aria-label="Current promotions" data-orbit>
+    <ul class="orbit-container clearfix">
+      
+      <li class="orbit-slide hero hero-transformation row-wrapper">
+        <div class="row gutter-bottom"> 
+          <div class="column text-center gutter-bottom-large">
+            <h1 class="hero-title">Our Transformation<br>
+            <div class="weight-light reduce"> A Better Freddie Mac, a Better Housing Finance System</div>
+            </h1>
+            <p class="gutter-bottom-medium"><a href="/about/company/" class="tertiary button hero-button">See How <span class="show-for-sr"> we're creating a better housing system</span></a></p>
+          </div>
+        </div>
+      </li>
+      
+      <li class="orbit-slide background-sky row-wrapper">
+        <!-- add background-sky remove hero-dts-->
+        <div class="row gutter-bottom">
+          <div class="column medium-6">
+            <div class="jen-house gutter-right">
+              <img src="http://extcstage.fhlmc.com:8090/about/national-homeownership-month/images/jen-house.png"
+                aria-hidden="true" class="no-border" alt="graphic">
+            </div>
+          </div>
+          <div class="column medium-6 text-left gutter-bottom-large">
+            <h1 class="hero-title nhm-title accent-primary">It's National Homeownership Month
+              <div class="weight-light reduce accent-gray" style="font-size:66%;"">Join us in celebrating home and the important work we do together</div>
+            </h1>
+            <p class="gutter-bottom-medium"><a href="/about/national-homeownership-month/" class="secondary button hero-button">See
+                How</a></p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="hero-edge"> </div>

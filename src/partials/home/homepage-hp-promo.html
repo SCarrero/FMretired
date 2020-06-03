@@ -1,0 +1,106 @@
+<style>
+#home-content-bands {
+  background-color: #f9f9f9;
+}
+.hp-offset {
+    padding: 20px 30px;
+}
+.hp-elbow {
+  padding-top: 2rem;
+  padding-bottom: 2rem; 
+} 
+h2.homepossible {
+  font-size: 2.5rem;
+  font-size: calc(34px +  26 * (100vw - 320px)/1180);
+  color: #FFEA00;
+  margin: 0 0 0.4em;
+  line-height: 1.1;
+}
+h2.homepossible div {
+  font-size: 1.5rem;
+  font-size: calc(22px +  8 * (100vw - 320px)/1180);
+}
+p.homepossible-sub {
+  font-size: 1rem;
+  font-size: calc(16px +  8 * (100vw - 320px)/1180); 
+  line-height: 1.2;
+}
+
+.finance-research-content {
+	@include breakpoint(xlarge) {
+		padding: $gutter * 2.5 $gutter * 3;
+	}  
+}
+
+
+@media screen and (min-width: 35.625em) {
+  .hp-wrapper  {
+    margin-right: 1.5rem;
+    max-width: 33rem;
+  }
+}  
+@media screen and (min-width: 61.25em) {
+ .hp-wrapper  {
+    margin-right: 2rem;
+  }
+  .hp-elbow {
+    padding-top: 3rem;
+    padding-bottom: 3rem; 
+  } 
+}
+@media screen and (min-width: 78.75em) { 
+ .hp-wrapper  {
+    margin-right: 2.5rem;
+  }
+  .hp-elbow {
+    padding-bottom: 22rem; 
+  } 
+  .hp-offset {
+    margin-left: 9%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .row.hp-inner {
+    margin-right: 0;
+  }
+  .hp-content-block {
+    padding-right: 60px;
+  }
+}
+@media screen and (min-width: 93.75em) {  
+  h2.homepossible {
+    font-size: 3.75rem; 
+  } 
+  p.homepossible-sub {
+    font-size: 1.5em;
+  }
+  h2.homepossible div {
+    font-size: 1.875rem;
+  }
+}
+</style>
+
+<div class="background-blue background-stripes hp-elbow">
+  <div class="hp-offset">
+    <div class="row collapse hp-inner">
+      <div class="column xlarge-10 xlarge-offset-2">
+        <div class="row collapse">        
+          <div class="column medium-5 centered">
+            <div class="gutter-bottom hp-wrapper">
+              <img src="http://extcstage.fhlmc.com:8090/corporate/homepage/images/HP_50Billion_hero_no_overlay.jpg" alt="image of a single-family home with attractive landscaping">
+            </div>
+          </div>
+          <div class="column medium-7">
+            <div class="hp-content-block">
+              <h2 class="homepossible"><span class="weight-black">$50 Billion</span> <div style="font-size: 50%">In Home Possible® Mortgages</div></h2>
+              <p class="homepossible-sub">Making homeownership a reality for more than <strong>260,000</strong> families&hellip; and counting </p>
+              <p class="no-margin"><a class="button hollow" href="/singlefamily/mortgages/homepossible/milestone.html">Learn More</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

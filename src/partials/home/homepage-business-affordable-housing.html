@@ -1,0 +1,96 @@
+<style>
+.homepage-business-highlight{
+  margin:0;
+  padding:3.5rem 0;
+  background-position: static;
+  overflow: hidden; 
+  position: relative; 
+  color: #fff;
+}
+.homepage-business-highlight::before {
+    content: ' ';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #777874;
+    background: url('/images/homepage/bg_home_affordable.jpg') no-repeat center center;
+    background-size: cover;
+    will-change: transform; 
+    z-index: -1;
+  }
+.business-highlight-contents{
+  padding: 0 20px;
+}
+.affordable-subtitle {
+  font-size: calc(20px + 8 * (100vw - 320px) / 1180);
+  font-weight: inherit;
+  line-height: 1.2;
+  margin: 0.7em 0 1.25em;
+}
+.affordable-title {
+  font-size: 1.875rem;
+  font-size: -moz-calc(30px +  16 * (100vw - 320px)/1180);
+  font-size: calc(30px +  16 * (100vw - 320px)/1180);
+  line-height: 1.1;
+  color: #f4f4f4;
+}
+.aff-divider { 
+  border-color: rgba(255, 255, 255, .8); 
+  border-width: 0px; 
+  border-style: solid; 
+  border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 3%, rgba(255, 255, 255, 0.8) 3.1%, rgba(255, 255, 255, 0.8) 95.9%, rgba(255, 255, 255, 0) 96%) 1 100%;
+}
+@media screen and (min-width:46.25em){
+  .homepage-business-highlight{padding:4.5rem 0;}
+}
+@media print,screen and (min-width:61.25em){
+  .aff-divider { border-right-width:1px; }
+  .homepage-business-highlight{padding:6rem 0;}
+}
+@media screen and (min-width:78.75em){
+  .business-highlight-contents{
+    padding-left:0;
+  }
+  .homepage-business-highlight{
+    padding-bottom:25rem;  
+  } 
+}
+@media screen and (min-width: 93.75em) {
+  .affordable-title {
+    font-size: 2.875rem; 
+  } 
+  .affordable-subtitle {
+    font-size: 1.75rem;
+    margin-top: 1.5rem; 
+  }
+}
+</style>
+
+<div class="homepage-business-highlight clearfix row-wrapper">
+  <div class="row">
+    <div class="column xlarge-10 xlarge-offset-2">
+      <div class="business-highlight-contents">
+        <div class="row collapse">
+          <div class="column large-3 xlarge-3">
+            <div class="gutter-right-large aff-divider">
+              <h3 class="affordable-title weight-black large-text-right no-margin gutter-right-large">Annual Affordable Housing Goals</h3>
+            </div>
+          </div>            
+          <div class="column large-7 xlarge-6 end">
+            <div class="gutter-left-large">
+              <div class="gutter-left-large">
+                <p class="affordable-subtitle">See how we’re helping to meet affordable housing needs nationwide.</p>
+                <div><a class="button hollow no-margin" href="/about/business/affordable-housing.html">Our public mission</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
